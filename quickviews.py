@@ -62,7 +62,7 @@ class ModelBaseView(BaseView):
 class FormBase(ModelBaseView):
     
     """
-        Views based on form
+    Views based on form
         
     """
     fields = None
@@ -71,7 +71,7 @@ class FormBase(ModelBaseView):
         
         """
         
-        create a Form to be sent back by client
+        create a Form to be sent to the client
                             
         Common suffix: "form"
         
@@ -87,7 +87,7 @@ class FormBase(ModelBaseView):
 	<input type="submit" value="Create" />
 	{% endif %}
 </form>
-  <a href="{% url "object1_list" %}">No, cancel.</a>
+	<a href="{% url "object1_list" %}">No, cancel.</a>
 {% endblock %}
         """
         context_name = self.model_name + "_form"
@@ -468,7 +468,7 @@ class QuickView(FormBase, DisplayBase, Responsebase, DeleteBase):
         (listing, paginate, form, saveform, Uform, saveUform, delete)
         
         if template_name attribute is not set, template_name = "object_app/object_name" is generated
-        you can add any suffix you want to it, commons ones are detailed in the doc of each fonction
+        you can add any suffix you want to it, commons ones are detailed in the doc of each functions
         """
         
         self.suffix = suffix
