@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+        
+{% extends "base.html" %}
+
+    {% block content %}
+        <p>Confirm delete{{ object_detail.name }}?</p>
+        
+        <form action="{% url "object_delete" object_detail.id %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Yes, delete." />
+        <a href="{% url "object_list" %}">No, cancel</a>
+        </form>
+
+{% endblock %}
